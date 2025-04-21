@@ -1,0 +1,39 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+terraform.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Docker
+*.env
+docker-compose.override.yml
+
+# Jenkins
+secrets/
+*.log
+*.tmp
+workspace/
+.jenkins/
+
+# Kubernetes
+*.kube/
+kubeconfig
+.kubeconfig
+*.yaml.backup
+
+# Node / Python / Misc (if using)
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+
