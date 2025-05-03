@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'  // Change to 'new-mvn' if you customized it
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+                sh 'echo "Build completed successfully!"'
+            }
+        }
+        stage('test code') {
+            steps {
+                sh '''
+                    mvn test
+                    echo "Tests executed successfully"
+                '''
+            }
+        }
+    }
+}
